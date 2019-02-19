@@ -1,4 +1,4 @@
-# OpenST Developer Guidelines
+# 💻 OpenST Developer Guidelines
 
 ## General Project Setup
 
