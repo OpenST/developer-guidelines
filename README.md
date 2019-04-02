@@ -157,3 +157,63 @@ This section applies to Solidity and JavaScript projects alike.
 [soliumrc]: ./.soliumrc.json
 [travisci]: https://travis-ci.org/
 [webpack]: https://webpack.js.org/
+
+## Pull Requests
+
+_The following assumes that code and other work will continue to be stored on GitHub and that ZenHub will be the management tool_.
+
+A Pull Request (PR), which is a request for changing content within a repository, can be opened at anytime.
+
+Ideally, a PR is small, limited to a single objective, and in response to a specific GitHub issue.
+
+The PR is the only place any team member is expected to consult for information about the PR or its lifecycle.
+
+### Format
+
+The PR should be connected to any issues to which it is a response. If the PR resolves an issue, that should be indicated in the body of the PR (e.g., "Resolves #70", "Fixes #71", etc.).
+
+The PR's title and description should collectively address the following:
+- what is the purpose of these changes
+- what has changed
+- any information pertinent to this particular PR's review that are not generally true of PRs in the repo (e.g., assumptions, dependencies, departures from normal practice, offline agreements, etc.)
+- any additional information helpful for review (and posterity!)
+
+### Review
+
+If a PR is ready for review, the PR should be moved into the review pipeline (if it was not already there) and any assignees should be cleared.
+
+#### Assignment
+
+_The following assumes there is a single assignee for a PR. Should there be multiple assignees, apply sensible adjustments._
+
+The question of the best use of "Reviewers" and "Assignees" on GitHub appears to be open to debate. However, two features of our setup resolve the matter:
+- GitHub automatically lists anyone who adds a comment to a PR as a reviewer
+- ZenHub does not filter by reviewers, only by assignees and authors
+
+**On a PR, the person formally taking up the task of review, and who therefore accepts responsibility if she decides the work can be merged, should be set as the assignee.** This supports quick and simple assessment of resources via the ZenHub board. Others can, of course, review if they have capacity/interest and add their comments (doing so will automatically list them as reviewers), but they are not considered responsible for completion of the review.
+
+Generally speaking, the assignee self-assigns to the PR and, ideally, self-clears as necessary. If the assignee cannot complete review, that assignment should be cleared from the PR. In doing so, the PR will appear unassigned in the review pipeline on the ZenHub board and others will know that PR's review is available as a task to pick up. If the PR is not in a reviewable state, this can be reflected by moving the PR out of the review pipeline and/or assignment to the person responsible for addressing the state of the PR, according to any workflow policies or as deemed sensible.
+
+Clearing an assignment from an open PR in the review pipeline should be accompanied with an explanatory comment on the PR. When a review is completed in the normal GitHub flow (i.e., by providing a review comment with a required status such as "Request changes"), the assignment should be cleared. _For the avoidance of doubt, there is no need to add an additional comment explaining clearance of the assignment in the case of normal review completion._
+
+#### Comments
+
+Generally speaking, comments in relation to the PR (e.g. on closing, assignment, questions, change requests, etc.) should be made on the PR, and not on related issues.
+
+Generally speaking, if a comment does not concern the content or status of the PR, it should not be made on the PR. For example, a comment that the related issue was not sufficiently defined should be made on the issue, not on the PR—if the PR needs to be changed as a result of such comment, that will be reflected in changes to the PR (e.g., new or edited commits, closure, etc.).
+
+If a PR is closed but not merged, the closure should be accompanied with an explanatory comment.
+
+**Always speaking, comments should reflect empathy and respect for the author of the PR as well as the other team members.**
+
+#### Merger
+
+In addition to any other applicable PR-handling policies, **the PR should not be merged without a review completed in the normal GitHub flow from the PR's assignee.**
+
+#### Resources
+
+Some quick reads on PRs that were consulted, _inter alia_, in forming this guidance:
+- [Assigning issues and pull requests to other GitHub users](https://help.github.com/en/articles/assigning-issues-and-pull-requests-to-other-github-users)
+- [About pull request reviews](https://help.github.com/en/articles/about-pull-request-reviews)
+- [The (written) unwritten guide to pull requests](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests)
+- [The Art of Humanizing Pull Requests (PR’s)](https://hackernoon.com/the-art-of-humanizing-pull-requests-prs-b520588eb345)
