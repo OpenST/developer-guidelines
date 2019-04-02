@@ -144,20 +144,6 @@ This section applies to Solidity and JavaScript projects alike.
 
 * Format your code using `rustfmt`.
 
-[airbnb style guide]: https://github.com/airbnb/javascript
-[changelog example]: https://github.com/OpenSTFoundation/mosaic-contracts/blob/develop/CHANGELOG.md
-[discourse]: https://discuss.openst.org/
-[eslint]: https://eslint.org/
-[eslintrc]: ./.eslintrc.json
-[ethlint]: https://github.com/duaraghav8/Ethlint
-[gitter]: https://gitter.im/OpenSTFoundation/SimpleToken
-[readme example]: https://github.com/OpenSTFoundation/mosaic.js/blob/develop/README.MD
-[semantic versioning 2]: https://semver.org/
-[solidity style guide]: ./SOLIDITY_STYLE_GUIDE.md
-[soliumrc]: ./.soliumrc.json
-[travisci]: https://travis-ci.org/
-[webpack]: https://webpack.js.org/
-
 ## Pull Requests
 
 _The following assumes that code and other work will continue to be stored on GitHub and that ZenHub will be the management tool_.
@@ -168,15 +154,24 @@ Ideally, a PR is small, limited to a single objective, and in response to a spec
 
 The PR is the only place any team member is expected to consult for information about the PR or its lifecycle.
 
+### Summary
+
+* a PR is its source of truth
+* a PR should be connected to the relevant issue(s)
+* the reviewer who takes up review formally as an item of work should self-assign on the PR
+* when the review ends, because the assignee either completes the review or will not complete the review, assignment should be cleared
+* comments on the PR should be limited to the PR
+* comments about the PR should only be made on the PR
+
 ### Format
 
 The PR should be connected to any issues to which it is a response. If the PR resolves an issue, that should be indicated in the body of the PR (e.g., "Resolves #70", "Fixes #71", etc.).
 
 The PR's title and description should collectively address the following:
-- what is the purpose of these changes
-- what has changed
-- any information pertinent to this particular PR's review that are not generally true of PRs in the repo (e.g., assumptions, dependencies, departures from normal practice, offline agreements, etc.)
-- any additional information helpful for review (and posterity!)
+* what is the purpose of these changes
+* what has changed
+* any information pertinent to this particular PR's review that are not generally true of PRs in the repo (e.g., assumptions, dependencies, departures from normal practice, offline agreements, etc.)
+* any additional information helpful for review (and posterity!)
 
 ### Review
 
@@ -187,8 +182,8 @@ If a PR is ready for review, the PR should be moved into the review pipeline (if
 _The following assumes there is a single assignee for a PR. Should there be multiple assignees, apply sensible adjustments._
 
 The question of the best use of "Reviewers" and "Assignees" on GitHub appears to be open to debate. However, two features of our setup resolve the matter:
-- GitHub automatically lists anyone who adds a comment to a PR as a reviewer
-- ZenHub does not filter by reviewers, only by assignees and authors
+* GitHub automatically lists anyone who adds a comment to a PR as a reviewer
+* ZenHub does not filter by reviewers, only by assignees and authors
 
 **On a PR, the person formally taking up the task of review, and who therefore accepts responsibility if she decides the work can be merged, should be set as the assignee.** This supports quick and simple assessment of resources via the ZenHub board. Others can, of course, review if they have capacity/interest and add their comments (doing so will automatically list them as reviewers), but they are not considered responsible for completion of the review.
 
@@ -213,7 +208,25 @@ In addition to any other applicable PR-handling policies, **the PR should not be
 #### Resources
 
 Some quick reads on PRs that were consulted, _inter alia_, in forming this guidance:
-- [Assigning issues and pull requests to other GitHub users](https://help.github.com/en/articles/assigning-issues-and-pull-requests-to-other-github-users)
-- [About pull request reviews](https://help.github.com/en/articles/about-pull-request-reviews)
-- [The (written) unwritten guide to pull requests](https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests)
-- [The Art of Humanizing Pull Requests (PR’s)](https://hackernoon.com/the-art-of-humanizing-pull-requests-prs-b520588eb345)
+* [Assigning issues and pull requests to other GitHub users]
+* [About pull request reviews]
+* [The (written) unwritten guide to pull requests]
+* [The Art of Humanizing Pull Requests (PR’s)]
+
+[airbnb style guide]: https://github.com/airbnb/javascript
+[changelog example]: https://github.com/OpenSTFoundation/mosaic-contracts/blob/develop/CHANGELOG.md
+[discourse]: https://discuss.openst.org/
+[eslint]: https://eslint.org/
+[eslintrc]: ./.eslintrc.json
+[ethlint]: https://github.com/duaraghav8/Ethlint
+[gitter]: https://gitter.im/OpenSTFoundation/SimpleToken
+[readme example]: https://github.com/OpenSTFoundation/mosaic.js/blob/develop/README.MD
+[semantic versioning 2]: https://semver.org/
+[solidity style guide]: ./SOLIDITY_STYLE_GUIDE.md
+[soliumrc]: ./.soliumrc.json
+[travisci]: https://travis-ci.org/
+[webpack]: https://webpack.js.org/
+[Assigning issues and pull requests to other GitHub users]: https://help.github.com/en/articles/assigning-issues-and-pull-requests-to-other-github-users
+[About pull request reviews]: https://help.github.com/en/articles/about-pull-request-reviews
+[The (written) unwritten guide to pull requests]: https://www.atlassian.com/blog/git/written-unwritten-guide-pull-requests
+[The Art of Humanizing Pull Requests (PR’s)]: https://hackernoon.com/the-art-of-humanizing-pull-requests-prs-b520588eb345
