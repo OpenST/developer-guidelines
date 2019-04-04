@@ -95,16 +95,10 @@ This section applies to Solidity and JavaScript projects alike.
   * `build`
   * `prepack`
     * Should run all steps required before packing (publishing) the project (probably at least `npm run build`).
+    * When you use a packaging tool like [webpack], make sure that `npm ci` is part of the `prepack` script.
   * `lint`
 * Define `files` to minimize the size of the published package.
 * For library projects, `main` should point to `./lib/index.js`.
-
-### Packaged Projects
-
-⚠️ When you use a packaging tool like [webpack], make sure that `npm install` is part of the `prepack` script.
-Otherwise, packaged dependencies may be outdated.
-
-`main` (and `browser`) may point to `lib/<project>.node.js` (and `lib/<project>.web.js`).
 
 ## Rust
 
