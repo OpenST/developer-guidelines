@@ -36,6 +36,18 @@ Every project must have the following files:
   * For the layout of the changelog see this [changelog example].
   * Notable changes should link to their pull request(s) using absolute links.
 
+Ports:
+
+If your project runs processes that require ports on the host, for example ganache, the following ports should be used.
+We define ranges here so that you can select one or more ports inside the range *that should not conflict with the ports of the other repositories.*
+
+* Ganache: `50000 - 50999`
+* Integration test containers: `51000 - 51999`
+* Other processes: `52000 - 52999`
+
+This should avoid port conflicts as much as possible.
+It should furthermore rule out the case where, for example, tests of a repository pass or fail because another, differently configured ganache from another repository is still running.
+
 ## Releases
 
 Version identifiers follow [Semantic Versioning 2] without a leading `v`.
