@@ -96,6 +96,34 @@ Before merging the latest changes from `develop` into a release branch:
 * All build artifacts of a library project should be in the directory `./lib`.
 * All documentation should be below the directory `./docs`.
 
+### Logging 
+
+* [Winston](https://github.com/winstonjs/winston) should be used as logging library.
+* By default logging to console should be enabled .
+* It should be possible to switch from console to file logging by updating an environment variable. 
+```bash
+export ENABLE_PROJECT_NAME_LOGGER=true
+
+```
+* Logger should support below log levels:
+    * error
+    * warn
+    * info
+    * verbose
+    * debug
+    * silly
+
+* Default log level should be `info`.  
+* It should be possible to change log level by updating an environment variable.   
+```bash
+export ENABLE_PROJECT_NAME_LOG_LEVEL=error
+
+```
+* Default log location should be `${PWD}/log`.
+* It should be able to change log location by updating an environment variable.  
+  ```
+  export PROJECT_NAME_LOGGER_PATH=/path
+  ```
 ## `package.json`
 
 This section applies to Solidity and JavaScript projects alike.
