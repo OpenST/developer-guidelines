@@ -93,7 +93,7 @@ Before merging the latest changes from `develop` into a release branch:
 ### Logging 
 
 * [Winston](https://github.com/winstonjs/winston) should be used as logging library.
-* By default logging should be enabled on the console.
+* By default logging to console should be enabled .
 * It should be possible to switch from console to file logging by updating an environment variable. 
 ```bash
 export ENABLE_PROJECT_NAME_LOGGER=true
@@ -110,7 +110,7 @@ export ENABLE_PROJECT_NAME_LOGGER=true
 * Default log level should be `info`.  
 * It should be possible to change log level by updating an environment variable.   
 ```bash
-export LOG_LEVEL=error
+export ENABLE_PROJECT_NAME_LOG_LEVEL=error
 
 ```
 * Default log location should be `${PWD}/log`.
