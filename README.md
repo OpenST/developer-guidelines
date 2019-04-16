@@ -157,3 +157,30 @@ This section applies to Solidity and JavaScript projects alike.
 [soliumrc]: ./.soliumrc.json
 [travisci]: https://travis-ci.org/
 [webpack]: https://webpack.js.org/
+
+## Release Process
+
+* First version to be released is alpha version, followed by beta version.
+*  Naming convention followed for alpha and beta version is `x.y.z-alpha.alphaversion` and `x.y.z-beta.betaversion`. The value of alpha version/beta version should be incremental starting from 1.
+Example :
+``` 
+    Consider the version to be released is 0.9.0. If we want to release alpha version for it, then the name of the version should be 0.9.0-alpha.1 and if we want to release beta version then the name for it should be 0.9.0-beta.1 .
+```
+* Naming convention for hotfix branch should be hotfix-x.y.z where x.y represents the release version number where the bug is found and z represents incremental patch version for the release starting from 1.
+
+1. For each version to be released(except hotfix release), below steps should be followed :
+    * Create branch release-x.y, where x and y represents the version numbers, from develop.
+    * Create a tag from release-x.y. If alpha/beta version is to be released then the tag name should include alpha/beta as per the naming convention mentioned.
+    * Integrate and test the alpha/beta version in JLP.
+    * Organise external security, once everything in integration works fine.
+    * Release which have been reviewed by external auditor, a rcversion for it should be released. Naming convention for rcversion is `x.y.z-rc.rcversion`. The value of `rcversion` is incremental starting from 1.
+    * We should then merge the branch release-x.y to develop and master branches.
+    * To release-x.y, create a tag named as x.y.0 .
+
+2.  For each hotfix version to be released, below steps should be followed :
+    * Create a branch from master if the bug is in the current released version.Otherwise create a branch from the tag where the bug is found. Name of the branch should be as mentioned.
+    * Commit the fix to the hotfix branch.
+    * After committing, test the hotfix in JLP.
+    * Merge the hotfix branch to master and develop. If the release branch currently exists, then the hotfix branch should be merged into that release branch instead of develop.
+    * Create a tag from master. Tag naming conversion should be x.y.z where x.y represents the release version where the bug was found and z’s value should be incremental.
+
