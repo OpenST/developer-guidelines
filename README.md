@@ -144,6 +144,32 @@ This section applies to Solidity and JavaScript projects alike.
 
 * Format your code using `rustfmt`.
 
+## Pull Requests
+
+_The following assumes that code and other work will continue to be stored on GitHub and that ZenHub will be the management tool_.
+
+A Pull Request (PR), which is a request for changing content within a repository, can be opened at anytime.
+
+Ideally, a PR is small, limited to a single objective, and in response to a specific GitHub issue.
+
+The PR is the only place any team member is expected to consult for information about the PR or its lifecycle.
+
+### Attributes
+
+* a PR is its source of truth
+* a PR should be connected using ZenHub to the relevant issue(s)
+* comments on the PR should be limited to the PR
+* comments about the PR should only be made on the PR
+
+### Lifecycle
+
+* the reviewer who takes up review formally as an item of work should self-assign on the PR
+* when an assigned review ends, because the assignee either completes the review or will not complete the review, assignment should be cleared
+* when an assigned review completes (ends and is submitted with a required status such as "Request changes"), the assignee should (based on current GitHub options):
+  * bounce if requesting changes
+  * merge if approved
+  * communicate to the team that a second review is needed if commenting
+
 [airbnb style guide]: https://github.com/airbnb/javascript
 [changelog example]: https://github.com/OpenSTFoundation/mosaic-contracts/blob/develop/CHANGELOG.md
 [discourse]: https://discuss.openst.org/
