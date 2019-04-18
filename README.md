@@ -183,3 +183,25 @@ The PR is the only place any team member is expected to consult for information 
 [soliumrc]: ./.soliumrc.json
 [travisci]: https://travis-ci.org/
 [webpack]: https://webpack.js.org/
+
+
+## Managing internal and external dependencies
+* Internal dependencies:
+    1. Internal dependencies are dependencies which are under `@openst` project. 
+    2. Until the stable version released, we should use version ranges to avoid any breaking change in newer minor versions.
+        Example:
+        ```
+               "dependencies": {
+                  "@openst/mosaic.js": ">=0.10.0 < 0.11.0"
+                }      
+        ```           
+    
+* External dependencies
+    1. For external dependencies we should use fixed version. Example:
+         ```
+                   "dependencies": {
+                      "ganache-cli": "6.4.1"
+                    }      
+         ```           
+        
+          
