@@ -1853,7 +1853,12 @@ function processStaking(
     ...
 }
 ```
+<<<<<<< HEAD
 ## Security
+=======
+
+##Security
+>>>>>>> Updated example of Checks effects and interactions to comply with style guide (amount -> _amount in method argument)
 
 ### Checks Effects Interactions
 
@@ -1890,13 +1895,13 @@ Details:
 
 Example: 
 ```
-function withdraw(uint256 amount) public {
-    require(balances[msg.sender] >= amount); // Checks
+function withdraw(uint256 _amount) public {
+    require(balances[msg.sender] >= _amount); // Checks
 
-    balances[msg.sender] -= amount;          // Effects
+    balances[msg.sender] -= _amount;          // Effects
 
     require(                                 // Interactions 
-        msg.sender.send(amount),
+        msg.sender.send(_amount),
         "Fund transfer failed."
     );
 }
