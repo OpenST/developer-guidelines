@@ -1857,7 +1857,7 @@ function processStaking(
 
 ### Checks Effects Interactions
 
-Checks effects interactions pattern should be used for writing contract methods which make external calls. This pattern reduces the attack surface for malicious contracts trying to hijack control flow after an external call.
+[Checks effects interactions](https://github.com/fravoll/solidity-patterns/blob/master/docs/checks_effects_interactions.md) pattern should be used for writing contract methods which make external calls. This pattern reduces the attack surface for malicious contracts trying to hijack control flow after an external call.
 
 When to use this pattern: 
 
@@ -1904,6 +1904,4 @@ function withdraw(uint256 _amount) public {
 
 **Note**: Even if emitting an event is technically considered as state change, it should be done at the end of the method in favor of readability. Position of event generally doesn't impact security aspect of the contract. 
 
-
-Refer [this](https://github.com/fravoll/solidity-patterns/blob/master/docs/checks_effects_interactions.md) for more details.
 
