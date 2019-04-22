@@ -1853,12 +1853,7 @@ function processStaking(
     ...
 }
 ```
-<<<<<<< HEAD
 ## Security
-=======
-
-##Security
->>>>>>> Updated example of Checks effects and interactions to comply with style guide (amount -> _amount in method argument)
 
 ### Checks Effects Interactions
 
@@ -1885,7 +1880,7 @@ Details:
     
     ```
 
-3. **Interactions**: External function calls, `.send()`, `.transfer()` and `.call()` should be done at the end of the method. The return value of external call should be asserted if possible. 
+3. **Interactions**: External function calls, `.send()`, `.transfer()` and `.call()` should be done at the end of the method. 
 
     ```
     require(otherContract.doSomething());
