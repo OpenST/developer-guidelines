@@ -1868,23 +1868,20 @@ Details:
 
 1. **Checks**: If input is not acceptable then fail fast and fail hard. 
 
-    ```
+    ```solidity
     require(someCondition);
-    
     ```
 
 2. **Effects**: Optimistically update the contract to a new valid state assuming that interactions will be successful. This protects the contract from re-entrancy attack and race conditions.
 
-    ```
+    ```solidity
     balance[msg.sender] = 0;
-    
     ```
 
 3. **Interactions**: External calls, including `.send()`, `.transfer()` and `.call()`, must be done at the end of the method. 
 
-    ```
+    ```solidity
     require(otherContract.doSomething());
-
     ```
 
 
