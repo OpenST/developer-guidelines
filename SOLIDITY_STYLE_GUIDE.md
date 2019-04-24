@@ -43,6 +43,8 @@
         7. [Alignment](#alignment)
         8. [Sections](#sections)
   5. [Comments](#comments)
+  6. [Security](#security) 
+        1. [Checks Effects Interactions](#checks-effects-interactions)
 
 *The current style guide is mostly based on [Ethereum Solidity Style Guide](http://solidity.readthedocs.io/en/v0.4.24/style-guide.html)
 with some changes and additions.*
@@ -1851,3 +1853,52 @@ function processStaking(
     ...
 }
 ```
+## Security
+
+### Checks Effects Interactions
+
+[Checks effects interactions](https://github.com/fravoll/solidity-patterns/blob/master/docs/checks_effects_interactions.md) pattern should be used for writing contract methods which make external calls. This pattern reduces the attack surface for malicious contracts trying to hijack control flow after an external call.
+
+When to use this pattern: 
+
+* It cannot be avoided to hand over control flow to an external entity.
+* You want to protect your functions against re-entrancy attacks.
+
+Details:
+
+1. **Checks**: If input is not acceptable then fail fast and fail hard. 
+
+    ```solidity
+    require(someCondition);
+    ```
+
+2. **Effects**: Optimistically update the contract to a new valid state assuming that interactions will be successful. This protects the contract from re-entrancy attack and race conditions.
+
+    ```solidity
+    balance[msg.sender] = 0;
+    ```
+
+3. **Interactions**: External calls, including `.send()`, `.transfer()` and `.call()`, must be done at the end of the method. 
+
+    ```solidity
+    require(otherContract.doSomething());
+    ```
+
+
+Example: 
+```
+function withdraw(uint256 _amount) public {
+    require(balances[msg.sender] >= _amount); // Checks
+
+    balances[msg.sender] -= _amount;          // Effects
+
+    require(                                 // Interactions 
+        msg.sender.send(_amount),
+        "Fund transfer failed."
+    );
+}
+```
+
+**Note**: Even if emitting an event is technically considered as state change, it is not necessary to emit the event before an external call. For example, events could be listed at the end of the method in favor of readability. 
+
+
