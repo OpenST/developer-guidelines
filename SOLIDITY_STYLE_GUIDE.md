@@ -1880,7 +1880,7 @@ Details:
     
     ```
 
-3. **Interactions**: External function calls, `.send()`, `.transfer()` and `.call()` should be done at the end of the method. 
+3. **Interactions**: External calls, including `.send()`, `.transfer()` and `.call()`, must be done at the end of the method. 
 
     ```
     require(otherContract.doSomething());
@@ -1902,6 +1902,6 @@ function withdraw(uint256 _amount) public {
 }
 ```
 
-**Note**: Even if emitting an event is technically considered as state change, it should be done at the end of the method in favor of readability. Position of event generally doesn't impact security aspect of the contract. 
+**Note**: Even if emitting an event is technically considered as state change, it is not necessary to emit the event before an external call. For example, events could be listed at the end of the method in favor of readability. 
 
 
