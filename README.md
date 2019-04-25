@@ -186,28 +186,21 @@ The PR is the only place any team member is expected to consult for information 
 
 
 ### Managing internal and external dependencies
-* Internal dependencies:
+* Internal dependencies
     1. Internal dependencies are dependencies which are under `@openst` project. 
-    2. Until the stable version is released, we should use version ranges to avoid any breaking change in newer minor versions.
+    2. Caret(`^`) should always be used for internal dependencies.
         Example:
         ```
-               "dependencies": {
-                  "@openst/mosaic.js": ">=0.10.0 < 0.11.0"
-                }      
-        ``` 
-    3. When patch versions are released, then we should use tilde `~`.
-        ```
-               "dependencies": {
-                          "@openst/mosaic.js": "~0.1.0"
-                        }      
-         ```      
-    
+        "dependencies": {
+            "@openst/mosaic.js": "^0.10.0"
+        }      
+        ```  
 * External dependencies
-    1. For external dependencies we should use fixed version. Example:
+    1. Fixed version should be specified for using external dependencies. Example:
          ```
-                   "dependencies": {
-                      "ganache-cli": "6.4.1"
-                    }      
+         "dependencies": {
+            "ganache-cli": "6.4.1"
+         }      
          ```           
         
           
