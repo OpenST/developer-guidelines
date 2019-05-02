@@ -140,7 +140,7 @@ This section applies to Solidity and JavaScript projects alike.
 * Define `files` to minimize the size of the published package.
 * For library projects, `main` should point to `./lib/index.js`.
 
-## Managing internal and external dependencies
+### Managing internal and external dependencies
 * Internal dependencies
     1. Internal dependencies are dependencies which are under `@openst` project. 
     2. Caret(`^`) should always be used for internal dependencies.
