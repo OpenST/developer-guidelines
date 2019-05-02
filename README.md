@@ -140,6 +140,24 @@ This section applies to Solidity and JavaScript projects alike.
 * Define `files` to minimize the size of the published package.
 * For library projects, `main` should point to `./lib/index.js`.
 
+### Managing internal and external dependencies
+* Internal dependencies
+    1. Internal dependencies are dependencies which are under `@openst` project. 
+    2. Caret(`^`) should always be used for internal dependencies.
+        Example:
+        ```
+        "dependencies": {
+            "@openst/mosaic.js": "^0.10.0"
+        }      
+        ```  
+* External dependencies
+    1. Fixed version should be specified for using external dependencies. Example:
+         ```
+         "dependencies": {
+            "ganache-cli": "6.4.1"
+         }      
+         ```           
+         
 ## Rust
 
 * Format your code using `rustfmt`.
@@ -182,4 +200,5 @@ The PR is the only place any team member is expected to consult for information 
 [solidity style guide]: ./SOLIDITY_STYLE_GUIDE.md
 [soliumrc]: ./.soliumrc.json
 [travisci]: https://travis-ci.org/
-[webpack]: https://webpack.js.org/
+[webpack]: https://webpack.js.org/        
+          
