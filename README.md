@@ -12,6 +12,10 @@
 * Documentation should be in markdown format.
 * Sign all your git commits and tags with your private key (and add the public key to your GitHub account).
 
+Labels:
+
+Every repository should have the same labels as the [developer guidelines labels].
+
 Branches:
 
 * `master` is the latest stable release.
@@ -190,6 +194,7 @@ The PR is the only place any team member is expected to consult for information 
 
 [airbnb style guide]: https://github.com/airbnb/javascript
 [changelog example]: https://github.com/OpenSTFoundation/mosaic-contracts/blob/develop/CHANGELOG.md
+[developer guidelines labels]: https://github.com/OpenST/developer-guidelines/labels
 [discourse]: https://discuss.openst.org/
 [eslint]: https://eslint.org/
 [eslintrc]: ./.eslintrc.json
@@ -200,5 +205,5 @@ The PR is the only place any team member is expected to consult for information 
 [solidity style guide]: ./SOLIDITY_STYLE_GUIDE.md
 [soliumrc]: ./.soliumrc.json
 [travisci]: https://travis-ci.org/
-[webpack]: https://webpack.js.org/        
-          
+[webpack]: https://webpack.js.org/
+
